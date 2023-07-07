@@ -1,0 +1,20 @@
+config_param = {
+    # 'phoning-r34': {'path':'pth/phoning-r34/milestone', 'date': '20220215',
+    #                 'w': 256, 'h':256, 'rgb': True,
+    #                 'import':"from phoning_models.models import Phoning_Model_MLU as MLU_MODEL"},
+    'phoning-r34': {'path': 'pth/phoning-r34/milestone', 'date': '20220302',
+                    'w': 256, 'h': 256, 'rgb': True,
+                    'import': "from phoning_models.models import Phoning_Model_MLU as MLU_MODEL"},
+    'smoking-face-r34': {'path':'pth/smoking-r34', 'date': '20220118',
+                    'w': 64, 'h':64, 'rgb': True,
+                    'import':"from smoking_models.models import SmokingModel_1_FACE_MLU as MLU_MODEL"},
+    'posenet-r18': {'path': 'pth/posenet-r18/milestone', 'date': '20220225',
+                    'w': 192, 'h': 256, 'rgb': True, 'quant_per_channel':False, #如果用了ConvTranspose2d, 则不能使用分通道量化
+                    'import': "from posenet_models.models import PoseNet_Model_MLU as MLU_MODEL"},
+    'faceattr-effnet': {'path': 'pth/faceattr-effnet', 'date': '20220628',
+                    'w': 112, 'h': 112, 'rgb': False,
+                    'import': "from faceattr_models.models import faceAttrModel_MLU as MLU_MODEL"},
+    'fastpose-r50': {'path': 'pth/fastpose-r18/milestone', 'date': '20220823',
+                    'w': 192, 'h': 224, 'rgb': True, 'quant_per_channel': False,
+                    'import': "from tongji_models.pose_model import FasePoseR50_MLU as MLU_MODEL"},
+}
